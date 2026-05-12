@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng Ký Khóa Học Msoft Huawei - Viettel Networks</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --viettel-red: #E30613;
+  --red-dark: #B30000;
+  --black: #0A0A0A;
+  --dark: #1A1A1A;
+  --gray1: #4A4A4A;
+  --gray2: #7F7F7F;
+  --gray3: #CCCCCC;
+  --gray4: #F5F5F5;
+  --white: #FFFFFF;
+}
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: var(--gray1); background: var(--white); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+a { color: inherit; text-decoration: none; }
+
+/* Navigation */
+nav { position: fixed; top: 0; width: 100%; background: var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.08); z-index: 100; padding: 16px 24px; }
+.nav-content { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+.logo { font-size: 20px; font-weight: bold; color: var(--viettel-red); }
+.nav-menu { display: flex; gap: 32px; align-items: center; }
+.nav-menu a { font-size: 14px; color: var(--gray1); transition: 200ms; }
+.nav-menu a:hover { color: var(--viettel-red); }
+.nav-cta { background: var(--viettel-red); color: var(--white); padding: 10px 24px; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: 200ms; }
+.nav-cta:hover { transform: scale(1.02); box-shadow: 0 4px 12px rgba(227,6,19,0.3); }
+.hotline { font-size: 12px; color: var(--gray1); }
+@media (max-width: 768px) {
+  .nav-menu { display: none; }
+  .hotline { display: none; }
+}
+
+/* Hero Section */
+.hero { margin-top: 64px; background: var(--black); color: var(--white); padding: 96px 24px; text-align: center; }
+.hero-content { max-width: 700px; margin: 0 auto; }
+.eyebrow { font-size: 12px; color: var(--viettel-red); font-weight: 600; margin-bottom: 16px; text-transform: uppercase; }
+.hero h1 { font-size: clamp(32px, 8vw, 56px); font-weight: 700; margin-bottom: 24px; line-height: 1.2; }
+.hero-subtitle { font-size: 18px; color: var(--gray3); margin-bottom: 32px; line-height: 1.6; }
+.badges { display: flex; gap: 16px; justify-content: center; margin-bottom: 32px; flex-wrap: wrap; }
+.badge { font-size: 12px; color: var(--gray2); }
+.cta-group { display: flex; gap: 16px; justify-content: center; margin-bottom: 48px; flex-wrap: wrap; }
+.btn-primary { background: var(--viettel-red); color: var(--white); padding: 16px 32px; border-radius: 4px; font-size: 16px; font-weight: 600; border: none; cursor: pointer; transition: 200ms; }
+.btn-primary:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+.btn-secondary { background: transparent; color: var(--white); padding: 14px 28px; border: 2px solid var(--white); border-radius: 4px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 200ms; }
+.btn-secondary:hover { background: var(--white); color: var(--black); }
+.scroll-arrow { font-size: 24px; animation: bounce 2s infinite; cursor: pointer; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+/* Social Proof Section */
+.social-proof { background: var(--gray4); padding: 64px 24px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+.stat-item { text-align: center; }
+.stat-number { font-size: 48px; color: var(--viettel-red); font-weight: 700; }
+.stat-label { font-size: 14px; color: var(--gray1); margin-top: 8px; }
+
+/* Benefits Section */
+.benefits { padding: 96px 24px; }
+.section-title { font-size: 40px; font-weight: 700; color: var(--black); text-align: center; margin-bottom: 64px; }
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto; }
+.benefit-card { background: var(--gray4); padding: 32px; border-radius: 8px; transition: 200ms; }
+.benefit-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+.benefit-icon { font-size: 48px; margin-bottom: 16px; }
+.benefit-card h3 { font-size: 20px; font-weight: 600; color: var(--black); margin-bottom: 12px; }
+.benefit-card p { font-size: 14px; color: var(--gray1); line-height: 1.6; }
+
+/* Content Section with Tabs */
+.content-section { background: var(--gray4); padding: 96px 24px; }
+.tabs { display: flex; gap: 24px; justify-content: center; margin-bottom: 48px; flex-wrap: wrap; max-width: 1000px; margin-left: auto; margin-right: auto; }
+.tab { background: transparent; border: none; padding: 12px 0; font-size: 16px; color: var(--gray2); cursor: pointer; border-bottom: 2px solid transparent; transition: 200ms; font-weight: 600; }
+.tab.active { color: var(--viettel-red); border-bottom-color: var(--viettel-red); }
+.tab:hover { color: var(--viettel-red); }
+.tab-content { display: none; max-width: 1000px; margin: 0 auto; }
+.tab-content.active { display: block; animation: fadeIn 300ms; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.tab-content p { font-size: 14px; line-height: 1.8; color: var(--gray1); margin-bottom: 16px; }
+
+/* Process Section */
+.process { padding: 96px 24px; }
+.timeline { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+.timeline-item { flex: 1; min-width: 200px; text-align: center; }
+.timeline-number { width: 48px; height: 48px; background: var(--viettel-red); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-weight: bold; font-size: 20px; }
+.timeline-item h3 { font-size: 16px; font-weight: 600; color: var(--black); margin-bottom: 12px; }
+.timeline-item p { font-size: 13px; color: var(--gray1); line-height: 1.6; }
+
+/* FAQ Section */
+.faq { padding: 96px 24px; background: var(--white); }
+.accordion { max-width: 800px; margin: 0 auto; }
+.accordion-item { margin-bottom: 16px; border: 1px solid var(--gray3); border-radius: 4px; }
+.accordion-header { background: var(--gray4); padding: 16px; cursor: pointer; font-weight: 600; color: var(--black); display: flex; justify-content: space-between; align-items: center; transition: 200ms; }
+.accordion-header:hover { background: #EFEFEF; }
+.accordion-header.active { background: var(--gray4); }
+.accordion-icon { transition: 300ms; }
+.accordion-header.active .accordion-icon { transform: rotate(180deg); }
+.accordion-content { display: none; padding: 16px; background: var(--white); color: var(--gray1); font-size: 14px; line-height: 1.6; }
+.accordion-content.active { display: block; }
+
+/* Final CTA Section */
+.final-cta { background: var(--viettel-red); color: var(--white); padding: 96px 24px; text-align: center; }
+.final-cta h2 { font-size: clamp(28px, 6vw, 48px); font-weight: 800; margin-bottom: 32px; line-height: 1.2; }
+.final-cta .btn-primary { background: var(--white); color: var(--viettel-red); margin-bottom: 16px; }
+.final-cta .btn-primary:hover { transform: scale(1.04); }
+.microcopy { font-size: 13px; color: var(--gray3); margin: 16px 0; }
+.urgency { font-size: 14px; color: var(--white); font-weight: 600; margin: 24px 0; }
+.countdown { font-family: 'Courier New', monospace; font-size: 28px; font-weight: bold; color: var(--white); background: rgba(0,0,0,0.2); padding: 16px 24px; border-radius: 8px; margin: 24px 0; display: inline-block; }
+
+/* Form Section */
+.form-section { padding: 96px 24px; background: var(--gray4); }
+.form-container { max-width: 600px; margin: 0 auto; background: var(--white); padding: 48px; border-radius: 8px; }
+.form-title { font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 32px; color: var(--black); }
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; font-size: 14px; font-weight: 600; color: var(--black); margin-bottom: 8px; }
+.form-input { width: 100%; padding: 12px 16px; border: 1px solid var(--gray3); border-radius: 4px; font-size: 14px; transition: 200ms; }
+.form-input:focus { outline: none; border-color: var(--viettel-red); box-shadow: 0 0 0 3px rgba(227,6,19,0.1); }
+.form-input.error { border-color: #FF2D2D; }
+.form-error { font-size: 12px; color: #FF2D2D; margin-top: 4px; display: none; }
+.form-input.error ~ .form-error { display: block; }
+.form-submit { width: 100%; background: var(--viettel-red); color: var(--white); padding: 14px 32px; font-size: 16px; font-weight: 600; border: none; border-radius: 4px; cursor: pointer; margin-top: 32px; transition: 200ms; }
+.form-submit:hover { transform: scale(1.02); }
+.form-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Footer */
+footer { background: var(--black); color: var(--gray3); padding: 64px 24px; }
+.footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 48px; margin-bottom: 48px; }
+.footer-section h4 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+.footer-section p, .footer-section a { font-size: 12px; margin-bottom: 8px; transition: 200ms; }
+.footer-section a:hover { color: var(--viettel-red); }
+.footer-divider { border-top: 1px solid var(--gray3); margin: 48px 0; }
+.footer-bottom { display: flex; justify-content: space-between; font-size: 12px; flex-wrap: wrap; gap: 16px; }
+
+@media (max-width: 768px) {
+  nav { padding: 12px 16px; }
+  .hero { padding: 64px 16px; margin-top: 56px; }
+  .benefits { padding: 64px 16px; }
+  .section-title { font-size: 28px; margin-bottom: 48px; }
+  .tabs { flex-direction: column; gap: 16px; }
+  .tab { border-bottom: none; text-align: left; padding: 12px; background: var(--white); border-left: 3px solid transparent; }
+  .tab.active { border-left-color: var(--viettel-red); }
+  .timeline { flex-direction: column; gap: 24px; }
+  .form-container { padding: 24px; }
+  .final-cta { padding: 64px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-content">
+    <div class="logo">Viettel Networks</div>
+    <div class="nav-menu">
+      <a href="#benefits">Nội Dung</a>
+      <a href="#process">Quy Trình</a>
+      <a href="#faq">Câu Hỏi</a>
+      <a href="#form">Liên Hệ</a>
+    </div>
+    <div style="flex: 1; text-align: right;">
+      <button class="nav-cta" onclick="smoothScroll('form')">Đăng Ký Ngay</button>
+      <div class="hotline">☎️ 0989 208 017</div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="eyebrow">⭐ CHƯƠNG TRÌNH ĐÀO TẠO NỘI BỘ</div>
+    <h1>Hướng Dẫn Cấu Hình Tone Thông Báo trên Msoft Huawei</h1>
+    <p class="hero-subtitle">Trang bị kỹ năng thực chiến — áp dụng ngay vào công việc vận hành khai thác thiết bị NSS Huawei. Miễn phí, có chứng nhận, tài liệu chi tiết đính kèm.</p>
+    <div class="badges">
+      <div class="badge">🎓 Có chứng nhận hoàn thành</div>
+      <div class="badge">📄 Tài liệu đầy đủ (4 phần)</div>
+      <div class="badge">💻 Thực hành trực tiếp</div>
+    </div>
+    <div class="cta-group">
+      <button class="btn-primary" onclick="smoothScroll('form')">Đăng Ký Tham Gia Ngay</button>
+      <button class="btn-secondary" onclick="smoothScroll('benefits')">Xem Nội Dung Khóa</button>
+    </div>
+    <div class="scroll-arrow" onclick="smoothScroll('stats')">↓</div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="social-proof" id="stats">
+  <div class="container">
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-number">90</div>
+        <div class="stat-label">Phút Thực Chiến</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Phần Nội Dung</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Loại Tone</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">7/10</div>
+        <div class="stat-label">Điểm Đạt Yêu Cầu</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits" id="benefits">
+  <div class="container">
+    <h2 class="section-title">Sau Khóa Học, Bạn Sẽ Làm Được Gì?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🔊</div>
+        <h3>Phân Loại Tone Thành Thạo</h3>
+        <p>Nắm rõ Signal Tone, Fixed Tone, Variable Tone. Biết khi nào dùng từng loại trong thực tế. Áp dụng ngay khi quay số trong MSC.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">⚙️</div>
+        <h3>Cấu Hình Thực Tế Trên Hệ Thống</h3>
+        <p>Dùng lệnh ADD TONECFG để ánh xạ Tone ID, thiết lập ngôn ngữ và số lần lặp. Thực hành trực tiếp trên MSC/UMG. Tài liệu chi tiết kèm theo.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🔗</div>
+        <h3>Nắm Nguyên Lý Giao Tiếp</h3>
+        <p>Hiểu toàn bộ luồng: MSC Server → H.248 → MGW. Nắm rõ thông số ToneID giữa Msoft và UMG. Xử sự cố nhanh hơn.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📋</div>
+        <h3>Áp Dụng Ngay Vào Công Việc</h3>
+        <p>Tài liệu đầy đủ 4 phần (lý thuyết + thực hành). Đọc xong là thao tác được. Không cần tra cứu thêm trong quá trình làm việc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Content Overview -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">Nội Dung Chi Tiết 4 Phần Khóa Học</h2>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab(event, 0)">Phân Loại Tone</button>
+      <button class="tab" onclick="switchTab(event, 1)">Nguyên Lý Phát Tone</button>
+      <button class="tab" onclick="switchTab(event, 2)">Thông Số ToneID</button>
+      <button class="tab" onclick="switchTab(event, 3)">Thực Hành Cấu Hình</button>
+    </div>
+    <div class="tab-content active">
+      <p><strong>Signal Tone</strong> là âm thanh phát hiện kết nối trong các trường hợp: kết nối nhưng chưa kết nối, kết nối bị từ chối...</p>
+      <p><strong>Fixed Tone</strong> là âm thanh cố định không thay đổi theo tham số, dùng cho các tín hiệu chuẩn quốc tế.</p>
+      <p><strong>Variable Tone</strong> là âm thanh thay đổi theo tham số do người quản trị thiết lập, cho phép tùy chỉnh cao.</p>
+    </div>
+    <div class="tab-content">
+      <p>Luồng giao tiếp từ MSC Server: MSC nhận yêu cầu → gửi tới H.248 gateway → MGW phát Tone → STP → trả lại UMG. Quá trình này diễn ra trong vòng 100-200ms tùy cấu hình.</p>
+      <p>Mỗi Tone có một ToneID riêng, được lưu trong cơ sở dữ liệu của Msoft. Khi nhận lệnh ADD TONECFG, hệ thống sẽ ánh xạ ToneID này đến các gateway cụ thể.</p>
+    </div>
+    <div class="tab-content">
+      <p><strong>ToneID giữa Msoft và UMG:</strong></p>
+      <p>• ToneID 0-9: Các tone chuẩn ISO (ringback, busy, etc.)<br>
+      • ToneID 10-50: Tone tùy chỉnh của Viettel<br>
+      • ToneID 51-100: Tone dự phòng cho phát triển<br></p>
+      <p>Mỗi ToneID có 3 tham số chính: tần số (Hz), độ dài (ms), số lần lặp.</p>
+    </div>
+    <div class="tab-content">
+      <p><strong>Bước 1:</strong> Đăng nhập MSC với tài khoản admin, vào mục Tone Configuration.</p>
+      <p><strong>Bước 2:</strong> Chọn Node cần cấu hình (UMG-01, UMG-02, etc.)</p>
+      <p><strong>Bước 3:</strong> Thực thi lệnh: ADD TONECFG ToneID=25 Freq1=440Hz Freq2=480Hz Duration=500 Repeat=3</p>
+      <p><strong>Bước 4:</strong> Lưu cấu hình và kiểm tra trên UMG. Phát thử bằng lệnh TEST TONE 25.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process">
+  <div class="container">
+    <h2 class="section-title">Cách Thức Tham Gia — 4 Bước Đơn Giản</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-number">1</div>
+        <h3>Đăng Ký Trước 14/05/2026</h3>
+        <p>Điền form gồm Mã NV, Họ tên và khảo sát kiến thức nền. Thời gian: ~3 phút. Miễn phí cho toàn bộ CBCNV.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-number">2</div>
+        <h3>Chuẩn Bị (Trước Ngày Học)</h3>
+        <p>Chuẩn bị máy tính và tài khoản đăng nhập: MSC, UMG, U2020. Không bắt buộc tài khoản cao cấp.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-number">3</div>
+        <h3>Tham Gia Học (17/05/2026, 8h30–10h00)</h3>
+        <p>Blended Learning: Online qua Zoom + Offline tại Phòng Giao ban T7, N6. Tham gia online hoặc offline đều được.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-number">4</div>
+        <h3>Kiểm Tra & Nhận Chứng Nhận</h3>
+        <p>Hoàn thành bài kiểm tra (lý thuyết 7đ + thực hành 3đ). Đạt ≥7/10 nhận chứng nhận chính thức.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          Ai được tham gia khóa học này?
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">CBCNV vận hành khai thác thiết bị NSS Huawei thuộc bộ phận BO, FO, FE. Ưu tiên những người mới tiếp xúc Msoft hoặc cần nâng cao kỹ năng.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          Tôi cần chuẩn bị gì trước khi tham gia?
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">Máy tính cá nhân và tài khoản đăng nhập: MSC, UMG, U2020. Account thường không cần quyền quản trị; tài khoản thành viên bình thường là đủ.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          Hình thức học là gì?
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">Blended Learning: Kết hợp online qua Zoom + offline tại Phòng Giao ban, Tầng 7, Tòa nhà N6, Hoàng Hoa Thám, TP.HCM (17/05/2026, 8h30–10h00). Có thể tham gia online hoặc offline tùy thích.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          Bài kiểm tra gồm những gì?
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">Hai phần: Lý thuyết (trắc nghiệm, 7 điểm) + Thực hành cấu hình Tone trên Msoft (3 điểm). Cần đạt ≥7/10 để hoàn thành và nhận chứng nhận.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          Tôi có nhận chứng nhận không?
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">Có. Học viên hoàn thành đạt yêu cầu (≥7/10) được cấp chứng nhận tham gia chính thức do Tổng Công ty Mạng lưới Viettel.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          Tài liệu có được cung cấp không?
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">Có. Học viên nhận tài liệu PDF đầy đủ 4 phần (lý thuyết + thực hành), screenshots chi tiết. Đọc xong là thao tác được ngay, không cần tra cứu thêm.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          Hạn đăng ký là khi nào?
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">Trước 23:59 ngày 14/05/2026. Liên hệ Đ/c Mai Ngọc Minh – Phòng Nhân sự – 0989 208 017 / minhmn@viettel.com.vn nếu có thắc mắc.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Sẵn Sàng Nâng Cao Kỹ Năng Vận Hành Msoft Huawei?</h2>
+    <button class="btn-primary" onclick="smoothScroll('form')">Đăng Ký Tham Gia Ngay →</button>
+    <div class="microcopy">✓ Miễn phí  •  ✓ Có chứng nhận  •  ✓ Tài liệu chi tiết đính kèm</div>
+    <div class="urgency">⏰ Hạn đăng ký: 14/05/2026 — Số lượng chỗ có hạn!</div>
+    <div class="countdown" id="countdown">Loading...</div>
+  </div>
+</section>
+
+<!-- Form -->
+<section class="form-section" id="form">
+  <div class="form-container">
+    <h2 class="form-title">Đăng Ký Tham Gia Khóa Học</h2>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label class="form-label">Mã Nhân Viên (Bắt buộc) *</label>
+        <input type="text" class="form-input" placeholder="Ví dụ: VT123456" name="maVN" required>
+        <div class="form-error">Vui lòng nhập Mã NV</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Họ và Tên (Bắt buộc) *</label>
+        <input type="text" class="form-input" placeholder="Ví dụ: Nguyễn Văn A" name="hoTen" required>
+        <div class="form-error">Vui lòng nhập Họ và Tên (tối thiểu 3 ký tự)</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email (Bắt buộc) *</label>
+        <input type="email" class="form-input" placeholder="example@viettel.com.vn" name="email" required>
+        <div class="form-error">Vui lòng nhập Email hợp lệ</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phòng Ban / Bộ Phận (Bắt buộc) *</label>
+        <select class="form-input" name="phongBan" required>
+          <option value="">-- Chọn phòng ban --</option>
+          <option value="BO">BO (Core Network)</option>
+          <option value="FO">FO (Fixed Operations)</option>
+          <option value="FE">FE (Field Engineering)</option>
+          <option value="Khac">Khác</option>
+        </select>
+        <div class="form-error">Vui lòng chọn Phòng Ban</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Kinh Nghiệm Với Msoft (Bắt buộc) *</label>
+        <select class="form-input" name="kinhnghiem" required>
+          <option value="">-- Chọn mức kinh nghiệm --</option>
+          <option value="Moi">Mới bắt đầu</option>
+          <option value="1Y">Có kinh nghiệm < 1 năm</option>
+          <option value="3Y">Có kinh nghiệm 1–3 năm</option>
+          <option value="3YP">Có kinh nghiệm > 3 năm</option>
+        </select>
+        <div class="form-error">Vui lòng chọn mức kinh nghiệm</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Hình Thức Tham Gia (Bắt buộc) *</label>
+        <select class="form-input" name="hinhthuc" required>
+          <option value="">-- Chọn hình thức --</option>
+          <option value="Online">Online (Zoom) — Từ chỗ làm việc</option>
+          <option value="Offline">Offline — Tại Phòng Giao Ban, N6, T7</option>
+          <option value="ChuaChac">Chưa chắc chắn</option>
+        </select>
+        <div class="form-error">Vui lòng chọn hình thức tham gia</div>
+      </div>
+      <div class="form-group">
+        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+          <input type="checkbox" name="dongY" required style="width: 18px; height: 18px;">
+          <span style="font-size: 12px;">Tôi đồng ý với <a href="#" style="color: var(--viettel-red);">điều khoản và điều kiện</a> *</span>
+        </label>
+        <div class="form-error">Vui lòng đồng ý với điều khoản</div>
+      </div>
+      <button type="submit" class="form-submit">Xác Nhận Đăng Ký</button>
+    </form>
+    <div id="successMsg" style="display: none; padding: 16px; background: #D4EDDA; color: #155724; border-radius: 4px; margin-top: 16px; text-align: center;">
+      ✓ Đăng ký thành công! Vui lòng check email để xác nhận.
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Viettel Networks</h4>
+      <p>Chương Trình Đào Tạo Nội Bộ</p>
+    </div>
+    <div class="footer-section">
+      <h4>Liên Hệ</h4>
+      <p>Đ/c Mai Ngọc Minh</p>
+      <p>Phòng Nhân sự</p>
+      <p>ĐT: <a href="tel:+84989208017">0989 208 017</a></p>
+      <p>Email: <a href="mailto:minhmn@viettel.com.vn">minhmn@viettel.com.vn</a></p>
+    </div>
+    <div class="footer-section">
+      <h4>Thông Tin</h4>
+      <p><a href="#benefits">Nội Dung</a></p>
+      <p><a href="#process">Quy Trình</a></p>
+      <p><a href="#faq">Câu Hỏi</a></p>
+      <p><a href="#form">Đăng Ký</a></p>
+    </div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <div>© 2026 Tổng Công ty Mạng lưới Viettel (VTNet). Bảo lưu mọi quyền.</div>
+  </div>
+</footer>
+
+<script>
+function smoothScroll(sectionId) {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function switchTab(event, index) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.tab-content')[index].classList.add('active');
+}
+
+function toggleAccordion(header) {
+  header.classList.toggle('active');
+  const content = header.nextElementSibling;
+  content.classList.toggle('active');
+}
+
+function updateCountdown() {
+  const deadline = new Date('2026-05-14T23:59:59').getTime();
+  const now = new Date().getTime();
+  const diff = deadline - now;
+  
+  if (diff < 0) {
+    document.getElementById('countdown').textContent = 'Đã Kết Thúc';
+    return;
+  }
+  
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  
+  document.getElementById('countdown').textContent = `${days} : ${String(hours).padStart(2, '0')} : ${String(minutes).padStart(2, '0')} : ${String(seconds).padStart(2, '0')}`;
+}
+
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  let isValid = true;
+  document.querySelectorAll('.form-input').forEach(input => {
+    if (!input.value) {
+      input.classList.add('error');
+      isValid = false;
+    } else {
+      input.classList.remove('error');
+    }
+  });
+  
+  if (isValid) {
+    document.getElementById('successMsg').style.display = 'block';
+    this.style.display = 'none';
+    setTimeout(() => {
+      alert('Đăng ký thành công! Cảm ơn bạn đã tham gia.');
+    }, 1000);
+  }
+});
+
+document.querySelectorAll('.form-input').forEach(input => {
+  input.addEventListener('focus', function() {
+    this.classList.remove('error');
+  });
+});
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
